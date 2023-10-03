@@ -19,6 +19,7 @@ export async function POST(req: Request) {
         password: await hash(password, 10),
       },
     });
+    console.log(user);
     return NextResponse.json(user);
   }
 }
